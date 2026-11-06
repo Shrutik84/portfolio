@@ -114,7 +114,8 @@ main hr {
     flex-wrap: wrap;
 }
 
-.leftsection .btn {
+.leftsection .btn,
+.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -132,13 +133,15 @@ main hr {
     transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.leftsection .btn:hover {
+.leftsection .btn:hover,
+.btn:hover {
     background: rgb(22, 17, 138);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(13, 10, 95, 0.25);
 }
 
-.leftsection .btn:active {
+.leftsection .btn:active,
+.btn:active {
     transform: translateY(0);
 }
 
@@ -163,7 +166,7 @@ main hr {
     max-width: 1100px;
     width: 88%;
     margin: 0 auto;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
     scroll-margin-top: 30px;
 }
 
@@ -173,7 +176,8 @@ main hr {
     display: block;
 }
 
-.secondsection h1 {
+.secondsection h1,
+.content-section h1 {
     font-size: 1.75rem;
     margin-top: 6px;
     color: #111;
@@ -239,6 +243,308 @@ main hr {
     text-align: center;
 }
 
+/* ================= COMMON CONTENT SECTIONS ================= */
+.content-section {
+    max-width: 1100px;
+    width: 88%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    scroll-margin-top: 30px;
+}
+
+/* ================= SERVICES SECTION ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px 24px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(15, 4, 133, 0.08);
+    border-color: rgb(47, 143, 207);
+}
+
+.service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.service-icon img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    color: rgb(15, 4, 133);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ================= PROJECTS SECTION ================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(15, 4, 133, 0.08);
+    border-color: rgb(47, 143, 207);
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(15, 4, 133);
+    background: rgba(47, 143, 207, 0.15);
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    color: #111;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 22px;
+}
+
+.tech-tags span {
+    font-size: 11.5px;
+    background: #f1f5f9;
+    color: #334155;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    background: rgba(13, 10, 95, 0.912);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.project-btn:hover {
+    background: rgb(22, 17, 138);
+}
+
+.project-btn.secondary {
+    background: transparent;
+    color: rgb(15, 4, 133);
+    border: 1.5px solid rgb(15, 4, 133);
+}
+
+.project-btn.secondary:hover {
+    background: rgba(15, 4, 133, 0.08);
+}
+
+/* ================= CONTACT SECTION ================= */
+.contact-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 35px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    color: rgb(15, 4, 133);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.contact-item-icon {
+    font-size: 1.5rem;
+}
+
+.contact-item strong {
+    color: #111;
+    display: block;
+    font-size: 13px;
+}
+
+.contact-item a {
+    color: rgb(15, 4, 133);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.social-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(47, 143, 207, 0.15);
+    color: rgb(15, 4, 133);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-badge:hover {
+    background: rgb(47, 143, 207);
+    color: white;
+}
+
+.contact-form {
+    flex: 1.1;
+    min-width: 280px;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: rgb(47, 143, 207);
+}
+
+.form-status {
+    margin-top: 14px;
+    font-size: 13.5px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.form-status.success {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
 /* ================= FOOTER ================= */
 footer {
     background-color: rgb(167, 176, 233);
@@ -265,6 +571,13 @@ footer {
     font-size: 1.3rem;
     color: rgb(15, 4, 133);
     line-height: 1.4;
+    font-weight: 600;
+}
+
+.footer h4 {
+    font-size: 1.05rem;
+    color: rgb(15, 4, 133);
+    margin-bottom: 12px;
     font-weight: 600;
 }
 
@@ -298,6 +611,37 @@ footer .footer-rights {
     padding: 16px 20px;
     font-size: 13px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ================= BACK TO TOP BUTTON ================= */
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(13, 10, 95, 0.912);
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: rgb(22, 17, 138);
+    transform: translateY(-3px);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
 }
 
 /* ================= RESPONSIVE DESIGN (TABLETS & MOBILE) ================= */
@@ -362,13 +706,15 @@ footer .footer-rights {
         margin: 40px auto;
     }
 
-    .secondsection {
+    .secondsection,
+    .content-section {
         width: 90%;
         padding-bottom: 60px;
         text-align: center;
     }
 
-    .secondsection h1 {
+    .secondsection h1,
+    .content-section h1 {
         margin-bottom: 10px;
     }
 
@@ -386,7 +732,6 @@ footer .footer-rights {
         background: transparent;
     }
 
-    /* Vertical black line running down */
     .secondsection .box::before {
         content: '';
         position: absolute;
@@ -408,7 +753,6 @@ footer .footer-rights {
         margin: 0;
     }
 
-    /* Icon centered on the vertical line */
     .image-top {
         position: absolute;
         left: -48px;
@@ -439,6 +783,17 @@ footer .footer-rights {
         font-size: 12px;
         line-height: 1.5;
         color: rgb(110, 110, 110);
+    }
+
+    .service-card,
+    .project-card,
+    .contact-info {
+        text-align: left;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
     }
 
     .footer {
@@ -501,19 +856,22 @@ footer .footer-rights {
         padding-top: 20px;
     }
 
-    .leftsection .btn {
+    .leftsection .btn,
+    .btn {
         width: 100%;
         max-width: 260px;
         font-size: 15px;
         padding: 11px 18px;
     }
 
-    .secondsection {
+    .secondsection,
+    .content-section {
         width: 92%;
         padding-bottom: 50px;
     }
 
-    .secondsection h1 {
+    .secondsection h1,
+    .content-section h1 {
         font-size: 1.45rem;
     }
 
@@ -540,6 +898,15 @@ footer .footer-rights {
         font-size: 11.5px;
     }
 
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 20px 16px;
+    }
+
     .footer {
         display: flex;
         flex-direction: column;
@@ -556,5 +923,13 @@ footer .footer-rights {
     footer .footer-rights {
         font-size: 12px;
         padding: 14px 10px;
+    }
+
+    .back-to-top {
+        bottom: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

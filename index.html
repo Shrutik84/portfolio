@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shruti Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +22,9 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Services</a></li>
-                    <li><a href="#experience">Project</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </div>
@@ -30,13 +32,14 @@
     </header>
 
     <main>
+        <!-- ================= HERO / ABOUT SECTION ================= -->
         <section class="firstsection" id="about">
             <div class="leftsection">
                 <div>Hi, my name is <span class="purple">Shruti</span></div>
                 <div>and I am a passionate<br>
                     <span id="element"></span>
                     <div class="buttons">
-                        <button class="btn" type="button">Download Resume</button>
+                        <button class="btn" type="button" id="resumeBtn">Download Resume</button>
                         <a href="https://www.linkedin.com/in/shrutikumari88" target="_blank" rel="noopener noreferrer" class="btn">Visit LinkedIn</a>
                     </div>
                 </div>
@@ -48,6 +51,7 @@
 
         <hr>
 
+        <!-- ================= TIMELINE SECTION ================= -->
         <section class="secondsection" id="experience">
             <span class="text-gray">What I have done so far</span>
             <h1>Learning experience</h1>
@@ -114,41 +118,102 @@
                 </div>
             </div>
         </section>
+
+        <hr>
+
+        <!-- ================= SERVICES SECTION ================= -->
+        <section class="content-section" id="services">
+            <span class="text-gray">What I Offer</span>
+            <h1>Services</h1>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#128187;</div>
+                    <h3>Frontend Web Development</h3>
+                    <p>Building clean, responsive, and mobile-friendly websites using HTML5, CSS3, and JavaScript with modern layouts and smooth user experiences.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#9881;</div>
+                    <h3>Software & Database Solutions</h3>
+                    <p>Developing structured programs using Core Java, Python, and C/C++ with efficient object-oriented programming principles and SQL database management.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="servicenow.png" alt="ServiceNow Logo">
+                    </div>
+                    <h3>ServiceNow Development</h3>
+                    <p>Developing custom applications and automations on the ServiceNow platform, including workflow design, integration, and user interface customization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section class="content-section" id="contact">
+            <span class="text-gray">Get In Touch</span>
+            <h1>Contact Me</h1>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's collaborate!</h3>
+                    <p>Feel free to reach out for web development projects, software opportunities, ServiceNow development, or just to say hello.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-item-icon">&#128231;</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:shrutik84@gmail.com">shrutik84@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-item-icon">&#128205;</span>
+                            <div>
+                                <strong>Location</strong>
+                                <p>India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-badges">
+                        <a href="https://www.linkedin.com/in/shrutikumari88" target="_blank" rel="noopener noreferrer" class="social-badge">LinkedIn</a>
+                        <a href="https://github.com/Shrutik84" target="_blank" rel="noopener noreferrer" class="social-badge">GitHub</a>
+                        <a href="https://www.instagram.com/shru__.04" target="_blank" rel="noopener noreferrer" class="social-badge">Instagram</a>
+                    </div>
+                </div>
+
+               
+            </div>
+        </section>
     </main>
 
-    <footer id="contact">
+    <!-- ================= FOOTER ================= -->
+    <footer>
         <div class="footer">
             <div class="footer-first">
                 <h3>Shruti's Developer Portfolio</h3>
+                <p style="font-size: 13px; color: #333; margin-top: 6px;">Passionate developer and creative video editor building modern digital experiences.</p>
             </div>
             <div class="footer-second">
+                <h4>Connect</h4>
                 <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/shrutikumari88" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#experience">Services</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="https://www.linkedin.com/in/shrutikumari88" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/Shrutik84" target="_blank" rel="noopener noreferrer">Github</a></li>
+                    <li><a href="https://www.instagram.com/shru__.04" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 </ul>
             </div>
             <div class="footer-third">
+                <h4>Navigation</h4>
                 <ul>
-                    <li>
-                        <a href="https://github.com/Shrutik84" target="_blank" rel="noopener noreferrer">Github</a>
-                    </li>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#experience">Services</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
                 </ul>
             </div>
             <div class="footer-fourth">
+                <h4>Portfolio</h4>
                 <ul>
-                    <li>
-                        <a href="https://www.instagram.com/shru__.04" target="_blank" rel="noopener noreferrer">Insta</a>
-                    </li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#experience">Services</a></li>
+                    <li><a href="#projects">Featured Projects</a></li>
                     <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="#about">Skills Overview</a></li>
                 </ul>
             </div>
         </div>
@@ -156,6 +221,9 @@
             Copyright &#169; shruti'sportfolio.com | All rights reserved
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to top">&#8593;</button>
 
     <!-- External Script for Typed.js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
