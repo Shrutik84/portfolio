@@ -1,7 +1,12 @@
+/* ================= GLOBAL RESETS & BASE ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,23 +14,32 @@ body {
     color: black;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ================= HEADER & NAVIGATION ================= */
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
+header {
     background-color: rgb(47, 143, 207);
-    padding: 0 20px;
+    width: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    min-height: 80px;
+}
+
+/* Top Name: Black on Blue matching user specification */
 .left {
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: white;
-    letter-spacing: 0.5px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 0.2px;
 }
 
 .right ul {
@@ -35,17 +49,17 @@ nav {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
+    gap: 24px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
-    transition: color 0.25s ease;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 6px 4px;
+    display: inline-block;
+    transition: color 0.2s ease;
 }
 
 nav ul li a:hover {
@@ -58,26 +72,27 @@ main hr {
     background: rgb(1, 75, 124);
     height: 1.5px;
     margin: 60px auto;
-    width: 85%;
+    width: 88%;
     max-width: 1100px;
 }
 
 /* ================= FIRST SECTION (HERO) ================= */
 .firstsection {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 70px auto 90px auto;
     padding: 0 40px;
     gap: 40px;
+    scroll-margin-top: 30px;
 }
 
 .leftsection {
-    width: 50%;
-    max-width: 550px;
-    font-size: 2.5rem;
-    line-height: 1.3;
+    flex: 1.1;
+    max-width: 580px;
+    font-size: 2.4rem;
+    line-height: 1.35;
 }
 
 .leftsection .purple {
@@ -86,10 +101,13 @@ main hr {
 
 #element {
     color: rgb(15, 4, 133);
+    font-weight: 600;
+    display: inline-block;
+    min-height: 1.35em;
 }
 
 .leftsection .buttons {
-    padding: 40px 0 10px 0;
+    padding: 35px 0 10px 0;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -105,25 +123,27 @@ main hr {
     color: white;
     border: 2px solid rgb(23, 3, 3);
     font-size: 18px;
+    font-weight: 500;
     font-family: inherit;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    min-height: 48px;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .leftsection .btn:hover {
-    background: rgb(20, 15, 140);
+    background: rgb(22, 17, 138);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 10, 95, 0.25);
 }
 
-.leftsection .btn a {
-    color: white;
-    text-decoration: none;
+.leftsection .btn:active {
+    transform: translateY(0);
 }
 
 .rightsection {
-    width: 45%;
+    flex: 0.9;
     max-width: 450px;
     display: flex;
     justify-content: center;
@@ -141,34 +161,37 @@ main hr {
 /* ================= SECOND SECTION (EXPERIENCE TIMELINE) ================= */
 .secondsection {
     max-width: 1100px;
-    width: 85%;
+    width: 88%;
     margin: 0 auto;
     padding-bottom: 120px;
+    scroll-margin-top: 30px;
 }
 
 .text-gray {
     color: rgb(162, 161, 161);
     font-size: 1rem;
+    display: block;
 }
 
 .secondsection h1 {
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     margin-top: 6px;
     color: #111;
 }
 
+/* Desktop Horizontal Timeline */
 .secondsection .box {
     background: black;
     width: 100%;
     height: 2px;
-    margin: 70px 0 160px 0;
+    margin: 70px 0 170px 0;
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
 .secondsection .vertical {
-    height: 93px;
+    height: 90px;
     width: 2px;
     background-color: black;
     position: relative;
@@ -178,21 +201,22 @@ main hr {
 }
 
 .image-top {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
     position: absolute;
-    top: -42px;
+    top: -44px;
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    padding: 2px;
-    border-radius: 4px;
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .vertical-title {
     position: absolute;
-    top: 105px;
+    top: 102px;
     left: 50%;
     transform: translateX(-50%);
     width: 145px;
@@ -205,7 +229,7 @@ main hr {
 
 .vertical-desc {
     position: absolute;
-    top: 165px;
+    top: 162px;
     left: 50%;
     transform: translateX(-50%);
     color: rgb(162, 161, 161);
@@ -218,16 +242,18 @@ main hr {
 /* ================= FOOTER ================= */
 footer {
     background-color: rgb(167, 176, 233);
+    width: 100%;
+    scroll-margin-top: 30px;
 }
 
 .footer {
     display: flex;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 45px 30px;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -236,9 +262,10 @@ footer {
 }
 
 .footer-first h3 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: rgb(15, 4, 133);
     line-height: 1.4;
+    font-weight: 600;
 }
 
 .footer ul {
@@ -273,45 +300,47 @@ footer .footer-rights {
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* ================= RESPONSIVE ALIGNMENT ================= */
-@media screen and (max-width: 1000px) {
+/* ================= RESPONSIVE DESIGN (TABLETS & MOBILE) ================= */
+
+/* Medium Screens & Tablets (max-width: 950px) */
+@media screen and (max-width: 950px) {
     nav {
-        height: auto;
-        padding: 16px 20px;
         flex-direction: column;
-        gap: 12px;
+        padding: 18px 20px;
+        gap: 14px;
+        text-align: center;
     }
 
     .left {
         font-size: 2rem;
+        text-align: center;
     }
 
-    nav ul {
+    .right ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 12px 18px;
     }
 
-    nav ul li {
-        margin: 0 12px;
+    nav ul li a {
+        font-size: 1rem;
     }
 
     .firstsection {
         flex-direction: column-reverse;
-        margin: 50px auto;
-        padding: 0 20px;
+        margin: 40px auto 50px auto;
+        padding: 0 24px;
         text-align: center;
         gap: 30px;
     }
 
     .leftsection {
-        width: 100%;
         max-width: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        font-size: 2.1rem;
+        font-size: 1.85rem;
     }
 
     .leftsection .buttons {
@@ -322,100 +351,210 @@ footer .footer-rights {
     .rightsection {
         width: 100%;
         max-width: 100%;
-        display: flex;
-        justify-content: center;
     }
 
     .rightsection img {
-        width: 65%;
-        max-width: 280px;
-        margin-bottom: 10px;
+        width: 55%;
+        max-width: 260px;
+    }
+
+    main hr {
+        margin: 40px auto;
     }
 
     .secondsection {
-        max-width: 90vw;
-        padding-bottom: 50px;
+        width: 90%;
+        padding-bottom: 60px;
+        text-align: center;
     }
 
-    /* Vertical timeline for tablet / mobile */
+    .secondsection h1 {
+        margin-bottom: 10px;
+    }
+
+    /* Vertical Timeline for Tablets and Mobile */
     .secondsection .box {
-        width: 2px;
+        width: 100%;
+        max-width: 480px;
         height: auto;
+        margin: 40px auto 40px auto;
+        padding-left: 55px;
+        display: flex;
         flex-direction: column;
-        margin: 40px auto 40px 30px;
-        gap: 85px;
-        background: black;
+        gap: 38px;
+        position: relative;
+        background: transparent;
+    }
+
+    /* Vertical black line running down */
+    .secondsection .box::before {
+        content: '';
+        position: absolute;
+        left: 23px;
+        top: 6px;
+        bottom: 16px;
+        width: 2px;
+        background-color: black;
     }
 
     .secondsection .vertical {
-        width: 30px;
-        height: 2px;
-        background-color: black;
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
+        margin: 0;
     }
 
+    /* Icon centered on the vertical line */
     .image-top {
-        top: 50%;
-        left: -16px;
-        transform: translateY(-50%);
+        position: absolute;
+        left: -48px;
+        top: 0;
+        transform: none;
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        z-index: 2;
     }
 
     .vertical-title {
-        top: -10px;
-        left: 45px;
+        position: static;
         transform: none;
+        width: 100%;
         text-align: left;
-        width: 250px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.35;
+        margin-bottom: 4px;
     }
 
     .vertical-desc {
-        top: 35px;
-        left: 45px;
+        position: static;
         transform: none;
+        width: 100%;
         text-align: left;
-        width: 270px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: rgb(110, 110, 110);
     }
 
     .footer {
-        padding: 30px 20px;
-        justify-content: space-around;
-        gap: 25px;
-    }
-
-    .footer > div {
-        width: 160px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .left {
-        font-size: 1.7rem;
-    }
-
-    .leftsection {
-        font-size: 1.6rem;
-    }
-
-    .leftsection .btn {
-        font-size: 16px;
-        padding: 10px 18px;
-    }
-
-    .secondsection .vertical-title {
-        width: 210px;
-    }
-
-    .secondsection .vertical-desc {
-        width: 210px;
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 20px;
+        padding: 35px 24px;
     }
 
     .footer > div {
         width: 100%;
+    }
+
+    .footer-first {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Small Phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 16px 12px;
+        gap: 12px;
+    }
+
+    .left {
+        font-size: 1.65rem;
+    }
+
+    .right ul {
+        gap: 8px 14px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .firstsection {
+        margin: 30px auto 40px auto;
+        padding: 0 16px;
+        gap: 24px;
+    }
+
+    .rightsection img {
+        width: 65%;
+        max-width: 210px;
+    }
+
+    .leftsection {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .leftsection .buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        padding-top: 20px;
+    }
+
+    .leftsection .btn {
+        width: 100%;
+        max-width: 260px;
+        font-size: 15px;
+        padding: 11px 18px;
+    }
+
+    .secondsection {
+        width: 92%;
+        padding-bottom: 50px;
+    }
+
+    .secondsection h1 {
+        font-size: 1.45rem;
+    }
+
+    .secondsection .box {
+        padding-left: 48px;
+        gap: 34px;
+    }
+
+    .secondsection .box::before {
+        left: 20px;
+    }
+
+    .image-top {
+        left: -44px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .vertical-title {
+        font-size: 13.5px;
+    }
+
+    .vertical-desc {
+        font-size: 11.5px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 16px;
+        gap: 22px;
+    }
+
+    .footer ul li {
+        margin-bottom: 8px;
+    }
+
+    footer .footer-rights {
+        font-size: 12px;
+        padding: 14px 10px;
     }
 }
